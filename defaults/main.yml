@@ -1,0 +1,10 @@
+
+# Ban time in seconds
+fail2ban_bantime: 600
+
+# Interval of seconds in which X max retry is allowed
+fail2ban_findtime: 600
+
+# Max retry possible into "findtime" interval before ban
+fail2ban_maxretry: 4
+
