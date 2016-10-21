@@ -4,6 +4,14 @@ Ansible Fail2ban Role
 Easily edit and deploy simple Fail2ban service into your server on the fly with easy configuration.
 
 
+System requirements
+------------
+
+* Ubuntu >= 12.04 or Debian >= 6
+* Ansible 2.0+ installed on the host
+* Vagrant 1.8.**4**+ (only needed for local deployments)
+* sflvault (needed to fetch secrets)
+
 
 Installation procedure
 ------------
