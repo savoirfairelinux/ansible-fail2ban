@@ -1,7 +1,8 @@
 ---
 - name: Installing fail2ban
   apt: name=fail2ban state=present
-  become: true
 
 - include: config.yml
-  become: true
+
+- name: Reloading fail2ban configuration
+  service: name=fail2ban state=reloaded
