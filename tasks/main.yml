@@ -1,8 +1,15 @@
 ---
-- name: Installing fail2ban
+- name: Ensure fail2ban is present
   apt: name=fail2ban state=present
 
-- include: config.yml
+- name: Configuring fail2ban "bantime" parameters
+  ini_file: dest=/etc/fail2ban/jail.conf section=DEFAULT option=bantime value="{{ fail2ban_bantime }}"
+  notify: fail2ban reload
 
-- name: Reloading fail2ban configuration
-  service: name=fail2ban state=reloaded
+- name: Configuring fail2ban "findtime" parameters
+  ini_file: dest=/etc/fail2ban/jail.conf section=DEFAULT option=findtime value="{{ fail2ban_findtime }}"
+  notify: fail2ban reload
+
+- name: Configuring fail2ban "maxretry" parameters
+  ini_file: dest=/etc/fail2ban/jail.conf section=DEFAULT option=maxretry value="{{ fail2ban_maxretry }}"
+  notify: fail2ban reload
