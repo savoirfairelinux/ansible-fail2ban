@@ -7,10 +7,8 @@ Easily edit and deploy simple Fail2ban service into your server on the fly with 
 System requirements
 ------------
 
-* Ubuntu 12.04+ or Debian 6+
+* Ubuntu 16.04+ or Debian 8+
 * Ansible 2.0+ installed on the host
-* Vagrant 1.8+ (only needed for local deployments)
-* sflvault (needed to fetch secrets)
 
 
 Installation procedure
