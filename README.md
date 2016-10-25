@@ -7,7 +7,7 @@ Easily edit and deploy simple Fail2ban service into your server on the fly with 
 System requirements
 ------------
 
-* Ubuntu 16.04+ or Debian 8+
+* Ubuntu 16.04 or Debian 8
 * Ansible 2.0+ installed on the host
 
 
